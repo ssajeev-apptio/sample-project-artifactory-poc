@@ -32,6 +32,7 @@ allprojects {
 }
 
 version = currentVersion
+buildDir = 'sample-project'
 
 apply plugin: 'com.jfrog.artifactory'
 apply plugin: 'java'
