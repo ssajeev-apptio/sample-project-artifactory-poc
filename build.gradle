@@ -26,7 +26,7 @@ buildscript {
 allprojects {
     repositories {
         maven {
-             #url "http://34.94.172.21:8082/artifactory/jcenter"
+             //url "http://34.94.172.21:8082/artifactory/jcenter"
              url "http://sivaramsajeev.jfrog.io/artifactory/jcenter"
         }
     }
@@ -52,7 +52,7 @@ publishing {
 }
 
 artifactory {
-    #contextUrl = 'http://34.94.172.21:8082/artifactory'
+    //contextUrl = 'http://34.94.172.21:8082/artifactory'
     contextUrl = 'http://sivaramsajeev.jfrog.io/artifactory'
     publish {
         repository {
