@@ -43,16 +43,29 @@ dependencies {
     testImplementation 'junit:junit:4.7'
 }
 
+// publishing {
+    // publications {
+     //   mavenJava(MavenPublication) {     
+            //    groupId = group
+          //      artifactId = project.getName()
+        //        version = currentVersion
+      //       from components.java
+    //    }
+  //  }
+//}
+
 publishing {
     publications {
-        mavenJava(MavenPublication) {     
-                groupId = group
-                artifactId = project.getName()
-                version = currentVersion
-             from components.java
+        maven(MavenPublication) {
+            groupId 'org.gradle.sample'
+            artifactId 'project1-sample'
+            version '1.1'
+
+            from components.java
         }
     }
 }
+
 
 artifactory {
     //contextUrl = 'http://34.94.172.21:8082/artifactory'
