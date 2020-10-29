@@ -46,10 +46,10 @@ dependencies {
 publishing {
     publications {
         mavenJava(MavenPublication) {
-            //from components.java
-                groupId = group
-                artifactId = project.getName()
-                version = currentVersion
+            from components.java
+                //groupId = group
+                //artifactId = project.getName()
+                //version = currentVersion
         }
     }
 }
