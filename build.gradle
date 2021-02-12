@@ -27,7 +27,7 @@ allprojects {
     repositories {
         maven {
              //url "http://34.94.172.21:8082/artifactory/jcenter"
-             url "http://" + ${artifactory_url} +"/artifactory/jcenter"
+             url "http://" + System.getenv("artifactory_url") +"/artifactory/jcenter"
         }
     }
 }
@@ -59,12 +59,13 @@ dependencies {
 
 artifactory {
     //contextUrl = 'http://34.94.172.21:8082/artifactory'
-    contextUrl = 'http://' + {artifactory_url} + '/artifactory'
+    //contextUrl = 'http://' + {artifactory_url} + '/artifactory'
+    contextUrl = 'http://' + System.getenv("artifactory_url") + '/artifactory'
     publish {
         repository {
             repoKey = 'gradle-release-local' // The Artifactory repository key to publish to
-            username = "${artifactory_user}" // The publisher user name
-            password = "${artifactory_password}" // The publisher password
+            username = Syste.getenv("artifactory_user") // The publisher user name
+            password = System.getenv("artifactory_password") // The publisher password
         }
         defaults {
             // Reference to Gradle publications defined in the build script.
