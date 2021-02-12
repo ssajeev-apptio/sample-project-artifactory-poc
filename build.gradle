@@ -27,7 +27,7 @@ allprojects {
     repositories {
         maven {
              //url "http://34.94.172.21:8082/artifactory/jcenter"
-             url "http://sivaramsajeev.jfrog.io/artifactory/jcenter"
+             url "http://" + ${artifactory_url} +"/artifactory/jcenter"
         }
     }
 }
@@ -59,7 +59,7 @@ dependencies {
 
 artifactory {
     //contextUrl = 'http://34.94.172.21:8082/artifactory'
-    contextUrl = 'http://sivaramsajeev.jfrog.io/artifactory'
+    contextUrl = 'http://' + {artifactory_url} + '/artifactory'
     publish {
         repository {
             repoKey = 'gradle-release-local' // The Artifactory repository key to publish to
