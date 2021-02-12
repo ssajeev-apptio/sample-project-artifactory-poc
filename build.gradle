@@ -64,7 +64,7 @@ artifactory {
     publish {
         repository {
             repoKey = 'gradle-release-local' // The Artifactory repository key to publish to
-            username = Syste.getenv("artifactory_user") // The publisher user name
+            username = System.getenv("artifactory_user") // The publisher user name
             password = System.getenv("artifactory_password") // The publisher password
         }
         defaults {
